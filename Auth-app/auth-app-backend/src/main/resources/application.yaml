@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: auth-app-backend
+  profiles:
+    active: dev
+
+
+
+#configuration
+
+#database confuguration
+
+#Mysql configuration
+
+#email configuration
+
+#oauth2 configuration
