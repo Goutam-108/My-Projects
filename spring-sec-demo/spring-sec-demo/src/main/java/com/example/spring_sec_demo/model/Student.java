@@ -1,4 +1,4 @@
-package com.example.spring_sec_demo;
+package com.example.spring_sec_demo.model;
 
 
 import lombok.AllArgsConstructor;
