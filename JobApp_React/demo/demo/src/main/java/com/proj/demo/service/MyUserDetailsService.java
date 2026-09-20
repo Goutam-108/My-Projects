@@ -1,8 +1,8 @@
-package com.example.spring_sec_demo.service;
+package com.proj.demo.service;
 
-import com.example.spring_sec_demo.dao.UserRepo;
-import com.example.spring_sec_demo.model.User;
-import com.example.spring_sec_demo.model.UserPrincipal;
+import com.proj.demo.model.User;
+import com.proj.demo.model.UserPrincipal;
+import com.proj.demo.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
