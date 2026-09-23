@@ -2,6 +2,7 @@ package com.example.spring_sec_demo.controller;
 
 
 import com.example.spring_sec_demo.model.User;
+import com.example.spring_sec_demo.service.JwtService;
 import com.example.spring_sec_demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,6 +21,9 @@ public class UserController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private JwtService jwtService;
+
     @PostMapping("register")
     public User register(@RequestBody User user){
         return service.saveUser(user);
@@ -31,7 +35,8 @@ public class UserController {
                 .authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 
         if(authentication.isAuthenticated()){
-            return "success";
+//            return "success";
+                return "Token : " + jwtService.generateToken(user.getUsername());
         }
         return "Login Failed";
     }
